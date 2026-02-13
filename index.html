@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaders of the Restoration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8cc7a;
+      --cream: #f5f0e8;
+      --dark: #1a1612;
+      --dark2: #252018;
+      --dark3: #2e2820;
+      --muted: #8a7d6a;
+      --living: #4a7c59;
+      --deceased: #5a4a3a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--dark);
+      color: var(--cream);
+      font-family: 'Crimson Text', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      border-bottom: 1px solid var(--gold);
+      background: linear-gradient(180deg, #0d0b08 0%, var(--dark) 100%);
+      position: relative;
+    }
+
+    header::before {
+      content: '✦';
+      display: block;
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 1rem;
+      margin-bottom: 1rem;
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Crimson Text', serif;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 1.5rem 2rem;
+      background: var(--dark2);
+      border-bottom: 1px solid #3a3020;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: var(--dark2);
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #3a3020;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--muted);
+      color: var(--muted);
+      padding: 0.4rem 1.2rem;
+      font-family: 'Crimson Text', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.05em;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201, 168, 76, 0.08);
+    }
+
+    /* Table */
+    .table-wrap {
+      overflow-x: auto;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    thead th {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--gold);
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    thead th:hover { color: var(--gold-light); }
+    thead th::after { content: ' ↕'; opacity: 0.4; font-size: 0.7rem; }
+    thead th.sort-asc::after { content: ' ↑'; opacity: 1; }
+    thead th.sort-desc::after { content: ' ↓'; opacity: 1; }
+
+    tbody tr {
+      border-bottom: 1px solid #2a2218;
+      transition: background 0.15s;
+      animation: fadeIn 0.4s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    tbody tr:hover { background: rgba(201, 168, 76, 0.05); }
+
+    tbody tr.living { border-left: 3px solid var(--living); }
+    tbody tr.deceased { border-left: 3px solid transparent; }
+
+    td {
+      padding: 0.7rem 1rem;
+      color: var(--cream);
+      vertical-align: top;
+    }
+
+    td.name-cell {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .fp-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      background: rgba(201, 168, 76, 0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.1rem 0.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 0.4rem;
+      font-family: 'Crimson Text', serif;
+    }
+
+    .living-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      background: rgba(74, 124, 89, 0.2);
+      border: 1px solid var(--living);
+      color: #6aaa7a;
+      padding: 0.1rem 0.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 0.4rem;
+      font-family: 'Crimson Text', serif;
+    }
+
+    td.muted { color: var(--muted); font-style: italic; font-size: 0.9rem; }
+    td.number { font-variant-numeric: tabular-nums; }
+
+    .notes-cell {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 250px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-style: italic;
+      border-top: 1px solid #3a3020;
+      margin-top: 2rem;
+    }
+
+    /* Highlight row on hover for talk link */
+    .talk-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.8rem;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .talk-link:hover { opacity: 1; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Leaders of the Restoration</h1>
+  <p class="subtitle">Quorum of the Twelve Apostles &amp; First Presidency</p>
+</header>
+
+<div class="stats-bar" id="statsBar">
+  <div class="stat"><span class="stat-number" id="statTotal">—</span><span class="stat-label">Total Records</span></div>
+  <div class="stat"><span class="stat-number" id="statLiving">—</span><span class="stat-label">Currently Living</span></div>
+  <div class="stat"><span class="stat-number" id="statFP">—</span><span class="stat-label">Served in First Presidency</span></div>
+  <div class="stat"><span class="stat-number" id="statLongest">—</span><span class="stat-label">Longest Tenure (yrs)</span></div>
+  <div class="stat"><span class="stat-number" id="statYoungest">—</span><span class="stat-label">Youngest Called (age)</span></div>
+</div>
+
+<div class="controls">
+  <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+  <button class="filter-btn" onclick="setFilter('living', this)">Living</button>
+  <button class="filter-btn" onclick="setFilter('deceased', this)">Deceased</button>
+  <button class="filter-btn" onclick="setFilter('fp', this)">First Presidency</button>
+</div>
+
+<div class="table-wrap">
+  <table id="mainTable">
+    <thead>
+      <tr>
+        <th onclick="sortBy('name')">Name</th>
+        <th onclick="sortBy('birthdate')">Born</th>
+        <th onclick="sortBy('date_called')">Called</th>
+        <th onclick="sortBy('ageAtCall')">Age Called</th>
+        <th onclick="sortBy('called_by')">Called By</th>
+        <th onclick="sortBy('replaced')">Replaced</th>
+        <th onclick="sortBy('tenure')">Tenure (yrs)</th>
+        <th onclick="sortBy('death')">Death</th>
+        <th>Notes</th>
+        <th>Talks</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<footer>
+  A personal family record · Data sourced from personal research
+</footer>
+
+<script>
+  let allData = [];
+  let currentFilter = 'all';
+  let sortKey = 'date_called';
+  let sortDir = 1;
+
+  function parseDate(str) {
+    if (!str) return null;
+    return new Date(str);
+  }
+
+  function formatDate(str) {
+    if (!str) return '—';
+    const d = parseDate(str);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  }
+
+  function calcAge(birthStr, toStr) {
+    const birth = parseDate(birthStr);
+    const to = toStr ? parseDate(toStr) : new Date();
+    if (!birth || !to) return null;
+    let age = to.getFullYear() - birth.getFullYear();
+    const m = to.getMonth() - birth.getMonth();
+    if (m < 0 || (m === 0 && to.getDate() < birth.getDate())) age--;
+    return age;
+  }
+
+  function calcTenure(calledStr, deathStr) {
+    const called = parseDate(calledStr);
+    const end = deathStr ? parseDate(deathStr) : new Date();
+    if (!called || !end) return null;
+    return Math.round((end - called) / (1000 * 60 * 60 * 24 * 365.25));
+  }
+
+  function talksUrl(name) {
+    const slug = name.toLowerCase()
+      .replace(/[^a-z\s]/g, '')
+      .trim()
+      .replace(/\s+/g, '-');
+    return `https://www.churchofjesuschrist.org/study/general-conference/topics/${slug}`;
+  }
+
+  function enrichData(data) {
+    return data.map(d => ({
+      ...d,
+      ageAtCall: calcAge(d.birthdate, d.date_called),
+      tenure: calcTenure(d.date_called, d.death),
+      isLiving: !d.death
+    }));
+  }
+
+  function computeStats(data) {
+    const living = data.filter(d => d.isLiving).length;
+    const fp = data.filter(d => d.first_presidency).length;
+    const longest = Math.max(...data.map(d => d.tenure || 0));
+    const youngest = Math.min(...data.filter(d => d.ageAtCall).map(d => d.ageAtCall));
+    document.getElementById('statTotal').textContent = data.length;
+    document.getElementById('statLiving').textContent = living;
+    document.getElementById('statFP').textContent = fp;
+    document.getElementById('statLongest').textContent = longest;
+    document.getElementById('statYoungest').textContent = youngest;
+  }
+
+  function setFilter(f, btn) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderTable();
+  }
+
+  function sortBy(key) {
+    if (sortKey === key) sortDir *= -1;
+    else { sortKey = key; sortDir = 1; }
+    document.querySelectorAll('thead th').forEach(th => {
+      th.classList.remove('sort-asc', 'sort-desc');
+    });
+    const idx = ['name','birthdate','date_called','ageAtCall','called_by','replaced','tenure','death'].indexOf(key);
+    if (idx >= 0) {
+      const th = document.querySelectorAll('thead th')[idx];
+      th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+    }
+    renderTable();
+  }
+
+  function renderTable() {
+    let data = [...allData];
+
+    if (currentFilter === 'living') data = data.filter(d => d.isLiving);
+    else if (currentFilter === 'deceased') data = data.filter(d => !d.isLiving);
+    else if (currentFilter === 'fp') data = data.filter(d => d.first_presidency);
+
+    data.sort((a, b) => {
+      let av = a[sortKey], bv = b[sortKey];
+      if (av === null || av === undefined) av = '';
+      if (bv === null || bv === undefined) bv = '';
+      if (typeof av === 'string') return av.localeCompare(bv) * sortDir;
+      return (av - bv) * sortDir;
+    });
+
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    data.forEach((d, i) => {
+      const tr = document.createElement('tr');
+      tr.className = d.isLiving ? 'living' : 'deceased';
+      tr.style.animationDelay = `${i * 0.03}s`;
+
+      const fpBadge = d.first_presidency ? '<span class="fp-badge">FP</span>' : '';
+      const livingBadge = d.isLiving ? '<span class="living-badge">Living</span>' : '';
+
+      tr.innerHTML = `
+        <td class="name-cell">${d.name}${fpBadge}${livingBadge}</td>
+        <td class="number">${formatDate(d.birthdate)}</td>
+        <td class="number">${formatDate(d.date_called)}</td>
+        <td class="number">${d.ageAtCall ?? '—'}</td>
+        <td class="muted">${d.called_by || '—'}</td>
+        <td class="muted">${d.replaced || '—'}</td>
+        <td class="number">${d.tenure ?? '—'}</td>
+        <td class="number">${d.death ? formatDate(d.death) : '—'}</td>
+        <td class="notes-cell">${d.notes || ''}</td>
+        <td><a class="talk-link" href="${talksUrl(d.name)}" target="_blank">Talks ↗</a></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  fetch('apostles.json')
+    .then(r => r.json())
+    .then(data => {
+      allData = enrichData(data);
+      computeStats(allData);
+      renderTable();
+    })
+    .catch(err => {
+      document.getElementById('tableBody').innerHTML =
+        '<tr><td colspan="10" style="text-align:center;color:#8a7d6a;padding:2rem;">Could not load data. Make sure apostles.json is in the same folder.</td></tr>';
+    });
+</script>
+</body>
+</html>

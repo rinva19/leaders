@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leaders of the Restoration</title>
+  <title>First Presidency & Quorum of the Twelve Apostles</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -60,9 +60,19 @@
     .subtitle {
       font-family: 'Crimson Text', serif;
       font-style: italic;
-      color: var(--muted);
-      font-size: 1.1rem;
+      color: var(--cream);
+      font-size: 1.2rem;
       margin-top: 0.5rem;
+      opacity: 0.85;
+    }
+
+    .scope-note {
+      font-family: 'Crimson Text', serif;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.6rem;
+      letter-spacing: 0.04em;
     }
 
     /* Stats bar */
@@ -202,7 +212,19 @@
       font-family: 'Crimson Text', serif;
     }
 
-    .living-badge {
+    .pres-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      background: rgba(160, 100, 60, 0.2);
+      border: 1px solid #c07840;
+      color: #d4955a;
+      padding: 0.1rem 0.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-left: 0.4rem;
+      font-family: 'Crimson Text', serif;
+    }
       display: inline-block;
       font-size: 0.6rem;
       background: rgba(74, 124, 89, 0.2);
@@ -251,8 +273,9 @@
 <body>
 
 <header>
-  <h1>Leaders of the Restoration</h1>
-  <p class="subtitle">Quorum of the Twelve Apostles &amp; First Presidency</p>
+  <h1>First Presidency &amp; Quorum of the Twelve Apostles</h1>
+  <p class="subtitle">The Church of Jesus Christ of Latter-day Saints</p>
+  <p class="scope-note">Records beginning with the call of Gordon B. Hinckley in 1961 · Not a complete historical record</p>
 </header>
 
 <div class="stats-bar" id="statsBar">
@@ -268,6 +291,7 @@
   <button class="filter-btn" onclick="setFilter('living', this)">Living</button>
   <button class="filter-btn" onclick="setFilter('deceased', this)">Deceased</button>
   <button class="filter-btn" onclick="setFilter('fp', this)">First Presidency</button>
+  <button class="filter-btn" onclick="setFilter('president', this)">Church Presidents</button>
 </div>
 
 <div class="table-wrap">
@@ -341,7 +365,11 @@
       ...d,
       ageAtCall: calcAge(d.birthdate, d.date_called),
       tenure: calcTenure(d.date_called, d.death),
-      isLiving: !d.death
+      isLiving: !d.death,
+      // Store numeric timestamps for proper date sorting
+      birthdate_ts: parseDate(d.birthdate) ? parseDate(d.birthdate).getTime() : 0,
+      date_called_ts: parseDate(d.date_called) ? parseDate(d.date_called).getTime() : 0,
+      death_ts: parseDate(d.death) ? parseDate(d.death).getTime() : 0,
     }));
   }
 
@@ -365,12 +393,15 @@
   }
 
   function sortBy(key) {
-    if (sortKey === key) sortDir *= -1;
-    else { sortKey = key; sortDir = 1; }
+    // Use timestamp versions for date columns
+    const sortKeyMap = { birthdate: 'birthdate_ts', date_called: 'date_called_ts', death: 'death_ts' };
+    const resolvedKey = sortKeyMap[key] || key;
+    if (sortKey === resolvedKey) sortDir *= -1;
+    else { sortKey = resolvedKey; sortDir = 1; }
     document.querySelectorAll('thead th').forEach(th => {
       th.classList.remove('sort-asc', 'sort-desc');
     });
-    const idx = ['name','birthdate','date_called','ageAtCall','called_by','replaced','tenure','death'].indexOf(key);
+    const idx = ['name','birthdate','date_called','ageAtCall','called_by','replaced','tenure','death','notes','talks'].indexOf(key);
     if (idx >= 0) {
       const th = document.querySelectorAll('thead th')[idx];
       th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
@@ -384,6 +415,7 @@
     if (currentFilter === 'living') data = data.filter(d => d.isLiving);
     else if (currentFilter === 'deceased') data = data.filter(d => !d.isLiving);
     else if (currentFilter === 'fp') data = data.filter(d => d.first_presidency);
+    else if (currentFilter === 'president') data = data.filter(d => d.church_president);
 
     data.sort((a, b) => {
       let av = a[sortKey], bv = b[sortKey];
@@ -402,10 +434,11 @@
       tr.style.animationDelay = `${i * 0.03}s`;
 
       const fpBadge = d.first_presidency ? '<span class="fp-badge">FP</span>' : '';
+      const presBadge = d.church_president ? '<span class="pres-badge">President</span>' : '';
       const livingBadge = d.isLiving ? '<span class="living-badge">Living</span>' : '';
 
       tr.innerHTML = `
-        <td class="name-cell">${d.name}${fpBadge}${livingBadge}</td>
+        <td class="name-cell">${d.name}${presBadge}${fpBadge}${livingBadge}</td>
         <td class="number">${formatDate(d.birthdate)}</td>
         <td class="number">${formatDate(d.date_called)}</td>
         <td class="number">${d.ageAtCall ?? '—'}</td>
@@ -423,6 +456,8 @@
   fetch('apostles.json')
     .then(r => r.json())
     .then(data => {
+      // Handle church_president field whether present or not
+      data = data.map(d => ({ church_president: false, ...d }));
       allData = enrichData(data);
       computeStats(allData);
       renderTable();

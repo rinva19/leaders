@@ -6,6 +6,7 @@
     "replaced": "Albert E. Bowen",
     "called_by": "David O. McKay",
     "first_presidency": true,
+    "church_president": true,
     "death": "1/27/2008",
     "notes": "15th President, 1995-2008"
   },
@@ -16,6 +17,7 @@
     "replaced": "George Q. Morris",
     "called_by": "David O. McKay",
     "first_presidency": false,
+    "church_president": false,
     "death": "11/27/1982",
     "notes": null
   },
@@ -26,6 +28,7 @@
     "replaced": "Henry D. Moyle",
     "called_by": "David O. McKay",
     "first_presidency": true,
+    "church_president": true,
     "death": "1/2/2018",
     "notes": "16th President, 2/3/2008"
   },
@@ -36,6 +39,7 @@
     "replaced": "Albert E. Bowen",
     "called_by": "Joseph Fielding Smith",
     "first_presidency": false,
+    "church_president": false,
     "death": "7/3/2015",
     "notes": null
   },
@@ -46,6 +50,7 @@
     "replaced": "Richard L. Evans",
     "called_by": "Joseph Fielding Smith",
     "first_presidency": false,
+    "church_president": false,
     "death": "2/25/1994",
     "notes": null
   },
@@ -56,6 +61,7 @@
     "replaced": "Joseph Fielding Smith",
     "called_by": "Harold B. Lee",
     "first_presidency": false,
+    "church_president": false,
     "death": "4/19/1985",
     "notes": null
   },
@@ -66,6 +72,7 @@
     "replaced": "Harold B. Lee",
     "called_by": "Spencer W. Kimball",
     "first_presidency": false,
+    "church_president": false,
     "death": "5/30/2015",
     "notes": null
   },
@@ -76,6 +83,7 @@
     "replaced": "Hugh B. Brown",
     "called_by": "Spencer W. Kimball",
     "first_presidency": false,
+    "church_president": false,
     "death": "7/31/2004",
     "notes": null
   },
@@ -85,7 +93,8 @@
     "date_called": "10/01/1978",
     "replaced": "Delbert L. Stapley",
     "called_by": "Spencer W. Kimball",
-    "first_presidency": false,
+    "first_presidency": true,
+    "church_president": false,
     "death": "8/10/2007",
     "notes": null
   },
@@ -96,6 +105,7 @@
     "replaced": "Mark E. Peterson",
     "called_by": "Spencer W. Kimball",
     "first_presidency": false,
+    "church_president": false,
     "death": "7/21/2004",
     "notes": null
   },
@@ -105,7 +115,8 @@
     "date_called": "04/07/1984",
     "replaced": "LeGrand Richards; Mark E. Petersen",
     "called_by": "Spencer W. Kimball",
-    "first_presidency": true,
+    "first_presidency": false,
+    "church_president": true,
     "death": "9/27/2025",
     "notes": "27th President of the Quorum of the 12; 17th President, 1/14/2018"
   },
@@ -116,6 +127,7 @@
     "replaced": "LeGrand Richards; Mark E. Petersen",
     "called_by": "Spencer W. Kimball",
     "first_presidency": true,
+    "church_president": true,
     "death": null,
     "notes": "1st counselor to Nelson; 18th President 2025"
   },
@@ -126,6 +138,7 @@
     "replaced": "Bruce R. McConkie",
     "called_by": "Spencer W. Kimball",
     "first_presidency": false,
+    "church_president": false,
     "death": "11/12/2023",
     "notes": "Acting president of the 12"
   },
@@ -136,6 +149,7 @@
     "replaced": "Marvin J. Ashton",
     "called_by": "Ezra Taft Benson",
     "first_presidency": false,
+    "church_president": false,
     "death": "10/1/2017",
     "notes": null
   },
@@ -146,6 +160,7 @@
     "replaced": "Spencer W. Kimball",
     "called_by": "Howard W. Hunter",
     "first_presidency": false,
+    "church_president": false,
     "death": "12/27/2025",
     "notes": "Acting president of the quorum of the 12 under Nelson. President of the quorum of the 12 to Oaks"
   },
@@ -156,6 +171,7 @@
     "replaced": "Howard W. Hunter",
     "called_by": "Gordon B. Hinckley",
     "first_presidency": true,
+    "church_president": false,
     "death": null,
     "notes": "1st counselor to Monson; 2nd counselor to Nelson; 1st counselor to Oaks"
   },
@@ -166,6 +182,7 @@
     "replaced": "David B. Haight; Neal A. Maxwell",
     "called_by": "Gordon B. Hinckley",
     "first_presidency": true,
+    "church_president": false,
     "death": null,
     "notes": "2nd counselor to Monson; Acting president of the Quorum of the 12 under Oaks following death of President Holland."
   },
@@ -176,6 +193,7 @@
     "replaced": "David B. Haight; Neal A. Maxwell",
     "called_by": "Gordon B. Hinckley",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -186,6 +204,7 @@
     "replaced": "James E. Faust",
     "called_by": "Gordon B. Hinckley",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -196,6 +215,7 @@
     "replaced": "Gordon B. Hinckley",
     "called_by": "Thomas S. Monson",
     "first_presidency": true,
+    "church_president": false,
     "death": null,
     "notes": "2nd counselor to Oaks"
   },
@@ -206,6 +226,7 @@
     "replaced": "Joseph B. Wirthlin",
     "called_by": "Thomas S. Monson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -216,6 +237,7 @@
     "replaced": "L. Tom Perry; Boyd K. Packer; Richard G. Scott",
     "called_by": "Thomas S. Monson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -226,6 +248,7 @@
     "replaced": "L. Tom Perry; Boyd K. Packer; Richard G. Scott",
     "called_by": "Thomas S. Monson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -236,6 +259,7 @@
     "replaced": "L. Tom Perry; Boyd K. Packer; Richard G. Scott",
     "called_by": "Thomas S. Monson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -246,6 +270,7 @@
     "replaced": "Robert D. Hales; Thomas S. Monson",
     "called_by": "Russell M. Nelson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -256,6 +281,7 @@
     "replaced": "Robert D. Hales; Thomas S. Monson",
     "called_by": "Russell M. Nelson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -266,6 +292,7 @@
     "replaced": "M. Russell Ballard",
     "called_by": "Russell M. Nelson",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -276,6 +303,7 @@
     "replaced": "Russell M. Nelson",
     "called_by": "Dallin H. Oaks",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   },
@@ -286,6 +314,7 @@
     "replaced": "Jeffrey R. Holland",
     "called_by": "Dallin H. Oaks",
     "first_presidency": false,
+    "church_president": false,
     "death": null,
     "notes": null
   }

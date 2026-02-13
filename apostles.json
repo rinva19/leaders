@@ -1,0 +1,292 @@
+[
+  {
+    "name": "Gordon Bitner Hinckley",
+    "birthdate": "06/23/1910",
+    "date_called": "10/05/1961",
+    "replaced": "Albert E. Bowen",
+    "called_by": "David O. McKay",
+    "first_presidency": true,
+    "death": "1/27/2008",
+    "notes": "15th President, 1995-2008"
+  },
+  {
+    "name": "Nathan Eldon Tanner",
+    "birthdate": "05/09/1898",
+    "date_called": "10/11/1962",
+    "replaced": "George Q. Morris",
+    "called_by": "David O. McKay",
+    "first_presidency": false,
+    "death": "11/27/1982",
+    "notes": null
+  },
+  {
+    "name": "Thomas S. Monson",
+    "birthdate": "08/21/1927",
+    "date_called": "10/04/1963",
+    "replaced": "Henry D. Moyle",
+    "called_by": "David O. McKay",
+    "first_presidency": true,
+    "death": "1/2/2018",
+    "notes": "16th President, 2/3/2008"
+  },
+  {
+    "name": "Boyd Kenneth Packer",
+    "birthdate": "09/10/1924",
+    "date_called": "04/09/1970",
+    "replaced": "Albert E. Bowen",
+    "called_by": "Joseph Fielding Smith",
+    "first_presidency": false,
+    "death": "7/3/2015",
+    "notes": null
+  },
+  {
+    "name": "Marvin Jeremy Ashton",
+    "birthdate": "05/06/1915",
+    "date_called": "12/02/1971",
+    "replaced": "Richard L. Evans",
+    "called_by": "Joseph Fielding Smith",
+    "first_presidency": false,
+    "death": "2/25/1994",
+    "notes": null
+  },
+  {
+    "name": "Bruce Redd McConkie",
+    "birthdate": "07/29/1915",
+    "date_called": "10/12/1972",
+    "replaced": "Joseph Fielding Smith",
+    "called_by": "Harold B. Lee",
+    "first_presidency": false,
+    "death": "4/19/1985",
+    "notes": null
+  },
+  {
+    "name": "Lowell Tom Perry",
+    "birthdate": "08/05/1922",
+    "date_called": "04/11/1974",
+    "replaced": "Harold B. Lee",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": false,
+    "death": "5/30/2015",
+    "notes": null
+  },
+  {
+    "name": "David Bruce Haight",
+    "birthdate": "09/02/1906",
+    "date_called": "01/08/1976",
+    "replaced": "Hugh B. Brown",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": false,
+    "death": "7/31/2004",
+    "notes": null
+  },
+  {
+    "name": "James Esdras Faust",
+    "birthdate": "07/31/1920",
+    "date_called": "10/01/1978",
+    "replaced": "Delbert L. Stapley",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": false,
+    "death": "8/10/2007",
+    "notes": null
+  },
+  {
+    "name": "Neal Ash Maxwell",
+    "birthdate": "07/06/1926",
+    "date_called": "07/23/1981",
+    "replaced": "Mark E. Peterson",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": false,
+    "death": "7/21/2004",
+    "notes": null
+  },
+  {
+    "name": "Russell Marion Nelson Sr.",
+    "birthdate": "09/09/1924",
+    "date_called": "04/07/1984",
+    "replaced": "LeGrand Richards; Mark E. Petersen",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": true,
+    "death": "9/27/2025",
+    "notes": "27th President of the Quorum of the 12; 17th President, 1/14/2018"
+  },
+  {
+    "name": "Dallin Harris Oaks",
+    "birthdate": "08/12/1932",
+    "date_called": "04/07/1984",
+    "replaced": "LeGrand Richards; Mark E. Petersen",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": true,
+    "death": null,
+    "notes": "1st counselor to Nelson; 18th President 2025"
+  },
+  {
+    "name": "Melvin Russell Ballard",
+    "birthdate": "10/08/1928",
+    "date_called": "10/10/1985",
+    "replaced": "Bruce R. McConkie",
+    "called_by": "Spencer W. Kimball",
+    "first_presidency": false,
+    "death": "11/12/2023",
+    "notes": "Acting president of the 12"
+  },
+  {
+    "name": "Robert D. Hales",
+    "birthdate": "08/24/1932",
+    "date_called": "04/07/1994",
+    "replaced": "Marvin J. Ashton",
+    "called_by": "Ezra Taft Benson",
+    "first_presidency": false,
+    "death": "10/1/2017",
+    "notes": null
+  },
+  {
+    "name": "Jeffrey Roy Holland",
+    "birthdate": "12/03/1940",
+    "date_called": "06/23/1994",
+    "replaced": "Spencer W. Kimball",
+    "called_by": "Howard W. Hunter",
+    "first_presidency": false,
+    "death": "12/27/2025",
+    "notes": "Acting president of the quorum of the 12 under Nelson. President of the quorum of the 12 to Oaks"
+  },
+  {
+    "name": "Henry Bennion Eyring",
+    "birthdate": "05/31/1933",
+    "date_called": "04/01/1995",
+    "replaced": "Howard W. Hunter",
+    "called_by": "Gordon B. Hinckley",
+    "first_presidency": true,
+    "death": null,
+    "notes": "1st counselor to Monson; 2nd counselor to Nelson; 1st counselor to Oaks"
+  },
+  {
+    "name": "Dieter Friedrich Uchtdorf",
+    "birthdate": "11/06/1940",
+    "date_called": "10/02/2004",
+    "replaced": "David B. Haight; Neal A. Maxwell",
+    "called_by": "Gordon B. Hinckley",
+    "first_presidency": true,
+    "death": null,
+    "notes": "2nd counselor to Monson; Acting president of the Quorum of the 12 under Oaks following death of President Holland."
+  },
+  {
+    "name": "David Allan Bednar",
+    "birthdate": "06/15/1952",
+    "date_called": "10/02/2004",
+    "replaced": "David B. Haight; Neal A. Maxwell",
+    "called_by": "Gordon B. Hinckley",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Quentin LaMar Cook",
+    "birthdate": "09/08/1940",
+    "date_called": "10/11/2007",
+    "replaced": "James E. Faust",
+    "called_by": "Gordon B. Hinckley",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "David Todd Christofferson",
+    "birthdate": "01/24/1945",
+    "date_called": "04/10/2008",
+    "replaced": "Gordon B. Hinckley",
+    "called_by": "Thomas S. Monson",
+    "first_presidency": true,
+    "death": null,
+    "notes": "2nd counselor to Oaks"
+  },
+  {
+    "name": "Neil Linden Andersen",
+    "birthdate": "08/09/1951",
+    "date_called": "06/04/2009",
+    "replaced": "Joseph B. Wirthlin",
+    "called_by": "Thomas S. Monson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Ronald Anderson Rasband",
+    "birthdate": "02/06/1951",
+    "date_called": "10/08/2015",
+    "replaced": "L. Tom Perry; Boyd K. Packer; Richard G. Scott",
+    "called_by": "Thomas S. Monson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Gary Evan Stevenson",
+    "birthdate": "08/06/1955",
+    "date_called": "10/08/2015",
+    "replaced": "L. Tom Perry; Boyd K. Packer; Richard G. Scott",
+    "called_by": "Thomas S. Monson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Dale Gunnar Renlund",
+    "birthdate": "11/13/1952",
+    "date_called": "10/08/2015",
+    "replaced": "L. Tom Perry; Boyd K. Packer; Richard G. Scott",
+    "called_by": "Thomas S. Monson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Gerritt Walter Gong",
+    "birthdate": "12/23/1953",
+    "date_called": "03/31/2018",
+    "replaced": "Robert D. Hales; Thomas S. Monson",
+    "called_by": "Russell M. Nelson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Ulisses Soares",
+    "birthdate": "10/02/1958",
+    "date_called": "03/31/2018",
+    "replaced": "Robert D. Hales; Thomas S. Monson",
+    "called_by": "Russell M. Nelson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Patrick Robert David Kearon",
+    "birthdate": "07/18/1961",
+    "date_called": "12/07/2023",
+    "replaced": "M. Russell Ballard",
+    "called_by": "Russell M. Nelson",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Gérald Caussé",
+    "birthdate": "05/20/1963",
+    "date_called": "11/06/2025",
+    "replaced": "Russell M. Nelson",
+    "called_by": "Dallin H. Oaks",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  },
+  {
+    "name": "Clark G. Gilbert",
+    "birthdate": "06/18/1970",
+    "date_called": "02/12/2026",
+    "replaced": "Jeffrey R. Holland",
+    "called_by": "Dallin H. Oaks",
+    "first_presidency": false,
+    "death": null,
+    "notes": null
+  }
+]

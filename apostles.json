@@ -8,6 +8,7 @@
     "first_presidency": true,
     "church_president": true,
     "death": "1/27/2008",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/gordon-b-hinckley?lang=eng",
     "notes": "15th President, 1995-2008"
   },
   {
@@ -19,6 +20,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "11/27/1982",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/n-eldon-tanner?lang=eng",
     "notes": null
   },
   {
@@ -30,6 +32,7 @@
     "first_presidency": true,
     "church_president": true,
     "death": "1/2/2018",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/thomas-s-monson?lang=eng",
     "notes": "16th President, 2/3/2008"
   },
   {
@@ -41,6 +44,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "7/3/2015",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/boyd-k-packer?lang=eng",
     "notes": null
   },
   {
@@ -52,6 +56,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "2/25/1994",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/marvin-j-ashton?lang=eng",
     "notes": null
   },
   {
@@ -63,6 +68,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "4/19/1985",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/bruce-r-mcconkie?lang=eng",
     "notes": null
   },
   {
@@ -74,6 +80,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "5/30/2015",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/l-tom-perry?lang=eng",
     "notes": null
   },
   {
@@ -85,6 +92,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "7/31/2004",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/david-b-haight?lang=eng",
     "notes": null
   },
   {
@@ -96,6 +104,7 @@
     "first_presidency": true,
     "church_president": false,
     "death": "8/10/2007",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/james-e-faust?lang=eng",
     "notes": null
   },
   {
@@ -107,6 +116,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "7/21/2004",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/neal-a-maxwell?lang=eng",
     "notes": null
   },
   {
@@ -118,6 +128,7 @@
     "first_presidency": false,
     "church_president": true,
     "death": "9/27/2025",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/russell-m-nelson?lang=eng",
     "notes": "27th President of the Quorum of the 12; 17th President, 1/14/2018"
   },
   {
@@ -129,6 +140,7 @@
     "first_presidency": true,
     "church_president": true,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/dallin-h-oaks?lang=eng",
     "notes": "1st counselor to Nelson; 18th President 2025"
   },
   {
@@ -140,6 +152,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "11/12/2023",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/m-russell-ballard?lang=eng",
     "notes": "Acting president of the 12"
   },
   {
@@ -151,6 +164,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "10/1/2017",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/robert-d-hales?lang=eng",
     "notes": null
   },
   {
@@ -162,6 +176,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": "12/27/2025",
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/jeffrey-r-holland?lang=eng",
     "notes": "Acting president of the quorum of the 12 under Nelson. President of the quorum of the 12 to Oaks"
   },
   {
@@ -173,6 +188,7 @@
     "first_presidency": true,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/henry-b-eyring?lang=eng",
     "notes": "1st counselor to Monson; 2nd counselor to Nelson; 1st counselor to Oaks"
   },
   {
@@ -184,6 +200,7 @@
     "first_presidency": true,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/dieter-f-uchtdorf?lang=eng",
     "notes": "2nd counselor to Monson; Acting president of the Quorum of the 12 under Oaks following death of President Holland."
   },
   {
@@ -195,6 +212,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/david-a-bednar?lang=eng",
     "notes": null
   },
   {
@@ -206,6 +224,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/quentin-l-cook?lang=eng",
     "notes": null
   },
   {
@@ -217,6 +236,7 @@
     "first_presidency": true,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/d-todd-christofferson?lang=eng",
     "notes": "2nd counselor to Oaks"
   },
   {
@@ -228,6 +248,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/neil-l-andersen?lang=eng",
     "notes": null
   },
   {
@@ -239,6 +260,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/ronald-a-rasband?lang=eng",
     "notes": null
   },
   {
@@ -250,6 +272,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/gary-e-stevenson?lang=eng",
     "notes": null
   },
   {
@@ -261,6 +284,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/dale-g-renlund?lang=eng",
     "notes": null
   },
   {
@@ -272,6 +296,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/gerrit-w-gong?lang=eng",
     "notes": null
   },
   {
@@ -283,6 +308,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/ulisses-soares?lang=eng",
     "notes": null
   },
   {
@@ -294,6 +320,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/patrick-kearon?lang=eng",
     "notes": null
   },
   {
@@ -305,6 +332,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/gerald-causse?lang=eng",
     "notes": null
   },
   {
@@ -316,6 +344,7 @@
     "first_presidency": false,
     "church_president": false,
     "death": null,
+    "talks_url": "https://www.churchofjesuschrist.org/study/general-conference/speakers/clark-g-gilbert?lang=eng",
     "notes": null
   }
 ]

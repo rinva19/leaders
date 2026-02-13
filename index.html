@@ -359,14 +359,6 @@
     return Math.round((end - called) / (1000 * 60 * 60 * 24 * 365.25));
   }
 
-  function talksUrl(name) {
-    const slug = name.toLowerCase()
-      .replace(/[^a-z\s]/g, '')
-      .trim()
-      .replace(/\s+/g, '-');
-    return `https://www.churchofjesuschrist.org/study/general-conference/topics/${slug}`;
-  }
-
   function enrichData(data) {
     return data.map(d => ({
       ...d,
@@ -455,7 +447,7 @@
         <td class="number">${d.tenure ?? '—'}</td>
         <td class="number">${d.death ? formatDate(d.death) : '—'}</td>
         <td class="notes-cell">${d.notes || ''}</td>
-        <td><a class="talk-link" href="${talksUrl(d.name)}" target="_blank">Talks ↗</a></td>
+        <td>${d.talks_url ? `<a class="talk-link" href="${d.talks_url}" target="_blank">Talks ↗</a>` : '—'}</td>
       `;
       tbody.appendChild(tr);
     });

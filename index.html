@@ -306,6 +306,7 @@
       <tr>
         <th onclick="sortBy('name')">Name</th>
         <th onclick="sortBy('birthdate')">Born</th>
+        <th onclick="sortBy('currentAge')">Age</th>
         <th onclick="sortBy('date_called')">Called</th>
         <th onclick="sortBy('ageAtCall')">Age Called</th>
         <th onclick="sortBy('called_by')">Called By</th>
@@ -370,9 +371,9 @@
     return data.map(d => ({
       ...d,
       ageAtCall: calcAge(d.birthdate, d.date_called),
+      currentAge: calcAge(d.birthdate, d.death || null), // age today if living, age at death if deceased
       tenure: calcTenure(d.date_called, d.death),
       isLiving: !d.death,
-      // Store numeric timestamps for proper date sorting
       birthdate_ts: parseDate(d.birthdate) ? parseDate(d.birthdate).getTime() : 0,
       date_called_ts: parseDate(d.date_called) ? parseDate(d.date_called).getTime() : 0,
       death_ts: parseDate(d.death) ? parseDate(d.death).getTime() : 0,
@@ -446,6 +447,7 @@
       tr.innerHTML = `
         <td class="name-cell">${d.name}${presBadge}${fpBadge}${livingBadge}</td>
         <td class="number">${formatDate(d.birthdate)}</td>
+        <td class="number">${d.isLiving ? `Age: ${d.currentAge}` : `Died at ${d.currentAge}`}</td>
         <td class="number">${formatDate(d.date_called)}</td>
         <td class="number">${d.ageAtCall ?? '—'}</td>
         <td class="muted">${d.called_by || '—'}</td>
